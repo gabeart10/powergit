@@ -28,4 +28,4 @@ users world). Git reigns.
 commits?**
 
 A: If you have a special save make sure you add a comment. Both the
-'gsave' and 'save' power git commands take one. 
+'gsave' and 'save' commands take one. 
