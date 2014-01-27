@@ -17,7 +17,7 @@ FAQ
 **Q: Did you know there is another `powergit` project?**
 
 A: Yes, and I imagine there are a lot of them. They suck---especially the
-one about powershell. (OMG, really? I mean, who the fuck uses that crap?
+one about powershell. (OMG, really? I mean, who the fuck uses that crap?)
 
 **Q: Aren't you afraid a command like 'save' will conflict?**
 
