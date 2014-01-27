@@ -1,5 +1,8 @@
 #!/bin/sh
 
+comment=save
+[ ! -z "$@" ] && comment="$@"
+
 gfor status
 gfor add -A
 gfor commit -a -m "save"

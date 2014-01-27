@@ -1,6 +1,9 @@
 #!/bin/sh
 
+comment=save
+[ ! -z "$@" ] && comment="$@"
+
 git status
 git add -A
-git commit -a -m "save"
+git commit -a -m "$comment"
 git push
