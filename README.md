@@ -1,12 +1,12 @@
-powergit
+PowerGit
 ========
 
-Manage multiple git repos from the command line. If you aren't using
-this (or something like it) you are wasting time.
+If you love git and work daily with multiple git repos (even hubs)
+then you will this set of PowerGit utility commands. Just pull down
+the repo and add this `powergit/bin` to your `$PATH`.
 
-``` bash
-export GITREPOS="bin:vimfile:com:me:private:/some other/repo:/project"
-gclone
-gfor
+Manage, create, clone, pull, push multiple git repos from the command
+line. If you aren't using this (or something like it) you are wasting
+time.
 
-```
+More docs later. Read the source for now. Easy stuff.
