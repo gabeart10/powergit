@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+$| = 1; # autoflush
+
+my $command = "@ARGV";
+
+$ENV{'GITREPOS'} or die ("GITREPOS empty");
+
+# resolves relative entries in path to full paths in $HOME
+my @repos = grep {s/^([^\/])/$ENV{HOME}\/$1/;1} split(':',$ENV{GITREPOS});
+
+for my $repo (@repos) {
+  if ($command) {
+    my $dashes = '-' x ((78-length($repo)-2)/2);
+    my $extra = (length($repo)%2) ? '-' : '';
+    print "$dashes $repo $dashes$extra\n";
+    system "cd $repo; $command" unless not -d $repo;
+  } else {
+    print "$repo\n";
+  }
+}

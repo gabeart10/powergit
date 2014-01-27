@@ -1,0 +1,5 @@
+#!/bin/sh
+
+command="$@"
+[ -z "$command" ] && command=status 
+gpath git $command
