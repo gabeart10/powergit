@@ -28,4 +28,6 @@ users world). Git reigns.
 commits?**
 
 A: If you have a special save make sure you add a comment. Both the
-'gsave' and 'save' commands take one. 
+'gsave' and 'save' commands take one. In fact, this allows you to make
+ONE comment on multiple repo commits *at the same time from one
+command*.
