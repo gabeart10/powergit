@@ -1,0 +1,13 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+foreach my $url (`gls url`) {
+  chomp $url;
+  my $dashes = '-' x ((78-length($url)-2)/2);
+  my $extra = (length($url)%2) ? '-' : '';
+  print "$dashes $url $dashes$extra\n";
+  my $ping = `git ls-remote $url HEAD`;
+  if ($ping) { print "$ping"; }
+}
