@@ -1,3 +1,17 @@
-#!/bin/sh
+#!/usr/bin/env perl
 
-gcmd git "$@"
+use strict;
+use warnings;
+
+foreach my $url (`gls`) {
+  chomp $url;
+  my ($dir) = $url =~ /(\S+)$/;
+  my $dashes = '-' x ((78-length($dir)-2)/2);
+  my $extra = (length($dir)%2) ? '-' : '';
+  print "$dashes $dir $dashes$extra\n";
+  if (-d $dir or -f $dir) {
+    print "Looks like $dir already exists.\n";
+  } else {
+    system "git clone $url\n";
+  }
+}
