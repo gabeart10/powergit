@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+$| = 1; # autoflush
+
+my $command = "@ARGV" or die "No command passed";
+
+for my $repo (`gls dir`) {
+  chomp $repo;
+  my $dashes = '-' x ((78-length($repo)-2)/2);
+  my $extra = (length($repo)%2) ? '-' : '';
+  print "$dashes $repo $dashes$extra\n";
+  system "cd $repo; $command " unless not -d $repo;
+}
