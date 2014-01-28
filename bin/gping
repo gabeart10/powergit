@@ -8,6 +8,6 @@ foreach my $url (`gls url`) {
   my $dashes = '-' x ((78-length($url)-2)/2);
   my $extra = (length($url)%2) ? '-' : '';
   print "$dashes $url $dashes$extra\n";
-  my $ping = `git ls-remote $url HEAD`;
-  if ($ping) { print "$ping"; }
+  my $ping = `git ls-remote $url HEAD 2>/dev/null`;
+  if ($ping) { print "$ping" } else { print "NOT FOUND\n" }
 }

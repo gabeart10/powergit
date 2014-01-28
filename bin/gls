@@ -2,19 +2,13 @@
 
 use strict;
 
+my $urls_file = $ENV{GITURLS} || "$ENV{HOME}/.giturls";
+
 $| = 1; # autoflush
 
 my $command = shift;
 $command =~ /^(urls?|names?|dirs?|)$/ or die "usage: gurl [url|name|dir]";
 
-my @possible_files = (
-  $ENV{GITURLS},
-  "$ENV{HOME}/_giturls",
-  "$ENV{HOME}/.giturls"
-);
-
-my $urls_file;
-foreach my $file (@possible_files) {$urls_file = $file if -f $file};
 -f $urls_file or die ("No giturls file found");
 
 open(my $handle, "<", $urls_file)
@@ -30,7 +24,7 @@ while (<$handle>) {
   if ($dir) {
     ($name) = $dir =~ /(\S+)$/;
   }else {
-    ($name) = $url =~ /([^\/]+)$/ if not $name;
+    ($name) = $url =~ /([^\/]+)$/;
     $name =~ s/\.git$//;
   }
 

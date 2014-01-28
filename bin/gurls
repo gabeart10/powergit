@@ -1,0 +1,8 @@
+#!/usr/bin/env perl
+
+use strict;
+
+my $editor = $ENV{EDITOR} || 'vim';
+my $giturls = $ENV{GITURLS} || "$ENV{HOME}/.giturls";
+exec $editor, $giturls;
+

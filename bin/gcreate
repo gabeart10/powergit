@@ -1,0 +1,64 @@
+#!/usr/bin/env perl
+
+use strict;
+
+my $giturls = $ENV{GITURLS} || "$ENV{HOME}/.giturls";
+
+my @urls;
+$urls[0] = "@ARGV";
+
+if ($urls[0]) {
+  `echo "$urls[0]" >> $giturls`;
+} else {
+  @urls = `gls`;
+}
+
+sub create {
+  my ($url,$dir) = @_;
+  my $command = join( ' && ',
+    "mkdir $dir",
+    "cd $dir",
+    "touch README.md",
+    "git init",
+    "git add README.md",
+    "git commit -m 'create'",
+    "git remote add origin $url",
+    "git push -u origin master"
+  );
+  system $command;
+}
+
+foreach my $url (@urls) {
+  chomp $url;
+
+  my ($url,$dir) = split /\s+/, $url;
+  my $name;
+  if ($dir) {
+    ($name) = $dir =~ /(\S+)$/;
+  }else {
+    ($name) = $url =~ /([^\/]+)$/;
+    $name =~ s/\.git$//;
+  }
+
+  next if not $name;
+
+  $dir = "$ENV{HOME}/$name" unless $dir =~ /^\//;
+
+  my $dashes = '-' x ((78-length($dir)-2)/2);
+  my $extra = (length($dir)%2) ? '-' : '';
+  print "$dashes $dir $dashes$extra\n";
+
+  if (-d $dir or -f $dir) {
+    print "Looks like $dir already exists.\n";
+    next;
+  } 
+
+  my $head = `git ls-remote $url HEAD 2>/dev/null`;
+
+  if ($head) {
+    print "Looks like $url already exists.\n";
+    next;
+  }
+
+  create($url,$dir)
+}
