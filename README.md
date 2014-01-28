@@ -97,7 +97,7 @@ The rest of the commands are pretty obvious:
 * `gsave` - same as `save`, but for all repos
 * `gls` - lists all your repos
 * `gls name` - lists all your repo names
-* `gls urls` - lists all your repo urls
+* `gls url` - lists all your repo urls
 * `gls dir` - lists all your repo directory full paths
 * `gcd KEY` - changes to the first repo containing the `KEY` in name
 * `gstatus` - `git status` on all repos
