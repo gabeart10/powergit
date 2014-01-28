@@ -89,6 +89,7 @@ So can go ahead and clone them down:
 
 ```
 gclone
+```
 
 The rest of the commands are pretty obvious:
 
