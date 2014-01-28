@@ -4,7 +4,6 @@ comment=save
 [ ! -z "$*" ] && comment="$*"
 
 gfor pull
-gfor status
 gfor add -A
 gfor commit -a -m "save"
 gfor push

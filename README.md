@@ -41,12 +41,6 @@ to create it on your hub of choice and `gclone` (after adding to
 
 **Q: Why not just use `bash` functions and aliases?**
 
-A: Fair question. Look at `bashrc_add` for stuff you can add to
-supplement or replace calling the Perl scripts. However, having the
-Perl script versions is still important to me so that I can use these
-on systems that don't have bash (crazy right) but do have Perl (AIX,
-HP-UX, old Solaris, etc.)
-
-TODO
-====
-* Add `gcd`
+A: Fair question. Bash functions would be faster for sure. Mostly
+because I don't always have the luxury of using Bash, but strangely
+I usually find Perl on older and more edge-case OSes (AIX, Sun, HP-UX)

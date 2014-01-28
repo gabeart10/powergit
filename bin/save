@@ -4,7 +4,6 @@ comment=save
 [ ! -z "$*" ] && comment="$*"
 
 git pull
-git status
 git add -A
 git commit -a -m "$comment"
 git push
