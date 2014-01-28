@@ -38,3 +38,7 @@ A: There was. Then I deleted it. In order for `git push -u origin
 master` to work you have to first have a repo there. It's just easier
 to create it on your hub of choice and `gclone` (after adding to
 `.giturls` or `git clone` it down.
+
+TODO
+====
+* Add `gcd`
