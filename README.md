@@ -1,15 +1,13 @@
 PowerGit
 ========
 
-If you love git and work daily with multiple git repos (even hubs)
-then you will really want to use this set of PowerGit utility commands (or
-something like it, I'm sure it exists out there, was faster to write it
-than search.) Just pull down the repo and add this `powergit/bin` to your
-`$PATH`.
-
 Manage, create, clone, pull, push multiple git repos from the command
-line. If you aren't using this (or something like it) you are wasting
-time.
+line.
+
+If you love git and work daily with multiple git repos (even hubs) then
+you will really want to use some kind of power `git` utility commands
+like these. I'm sure there are more out there. It was just faster to write
+these than search.
 
 Setup
 =====
@@ -19,6 +17,7 @@ Make sure you have [ssh keys][] setup and grab the usual way:
 ```
 cd ~
 git clone http://github.com/robmuh/powergit.git
+export PATH=$HOME/powergit/bin:$PATH
 ```
 
 That just may be the only one you have to write out. The rest you can
