@@ -105,12 +105,15 @@ The rest of the commands are pretty obvious:
 * `gpush` - `git push` every repo listed in `$GITURLS` file
 * `gclone` - `git clone` every repo listed in `$GITURLS` file
 * `gurls` - opens the `$GITURLS` file with your `$EDITOR`
-* `gcmd CMD` - `cd` into each repo and execute `CMD` 
-* `gfor GITCMD` - `cd` into each repo and execute `git GITCMD` 
+* `gcmd CMD` - `cd` into each repo and execute `CMD`
+* `gfor GITCMD` - `cd` into each repo and execute `git GITCMD`
 * `gping` - `git -ls-remote REPO HEAD` on each `REPO`
 
-Like I said, nothing fancy, just convenient. So nice especially to
-help move things between repos.
+Like I said, nothing fancy, just convenient. After using this I have
+completely dropped [DropBox][] and other methods of saving files of
+any type. The tools particularly help when moving stuff around between
+repos and reorganizing things.
+
 
 FAQ
 ===
@@ -146,5 +149,6 @@ A: Fair question. Bash functions would be faster for sure. Mostly
 because I don't always have the luxury of using Bash, but strangely
 I usually find Perl on older and more edge-case OSes (AIX, Sun, HP-UX)
 
+[DropBox]: http://dropbox.com
 [mine]: https://github.com/robmuh/config/blob/master/bashrc
 [ssh keys]: https://help.github.com/articles/generating-ssh-keys
