@@ -33,7 +33,7 @@ git@github.com:robmuh/filters.git
 git@github.com:trainemon/trainemon.git
 git@github.com:blockhead-battles/blockhead-battles.git
 git@github.com:robmuh/robmuh.github.io.git com
-git@main:private/private.git
+git@main:robmuh/private.git
 ```
 
 The second field is the directory in case you don't want the long
@@ -84,7 +84,7 @@ b131133108e9c8b2655f4de49302e67bca5827e3	HEAD
 b81b2c76fac466c48ec4a72b0f800453fe7af2e4	HEAD
 ----------- git@github.com:blockhead-battles/blockhead-battles.git -----------
 9e64af0d9c6c47ec7a387649a61cf7282be879c4	HEAD
------------ git@main:private/private.git -----------
+----------- git@main:robmuh/private.git -----------
 9999999999999999999999999999999999999999	HEAD
 ```
 So can go ahead and clone them down:
