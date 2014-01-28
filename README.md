@@ -31,3 +31,10 @@ A: If you have a special save make sure you add a comment. Both the
 'gsave' and 'save' commands take one. In fact, this allows you to make
 ONE comment on multiple repo commits *at the same time from one
 command*.
+
+**Q: Why isn't there a `gcreate` or `ginit`?**
+
+A: There was. Then I deleted it. In order for `git push -u origin
+master` to work you have to first have a repo there. It's just easier
+to create it on your hub of choice and `gclone` (after adding to
+`.giturls` or `git clone` it down.
