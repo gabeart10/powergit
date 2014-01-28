@@ -6,8 +6,9 @@ my $urls_file = $ENV{GITURLS} || "$ENV{HOME}/.giturls";
 
 $| = 1; # autoflush
 
-my $command = shift;
-$command =~ /^(urls?|names?|dirs?|)$/ or die "usage: gurl [url|name|dir]";
+my $is_command;
+my $arg = shift;
+$arg =~ /^(urls?|names?|dirs?|)$/ and $is_command++;
 
 -f $urls_file or die ("No giturls file found");
 
@@ -30,8 +31,13 @@ while (<$handle>) {
 
   $dir = "$ENV{HOME}/$name" unless $dir =~ /^\//;
 
-  if (! $command) { print "$url $dir\n"; }
-  elsif ($command =~ /^urls?/) { print "$url\n"; }
-  elsif ($command =~ /^names?/) { print "$name\n"; }
-  elsif ($command =~ /^dirs?/) { print "$dir\n"; }
+  if (! $arg) { print "$url $dir\n"; next }
+
+  if ($is_command) {
+    if ($arg =~ /^urls?/) { print "$url\n"; }
+    elsif ($arg =~ /^names?/) { print "$name\n"; }
+    elsif ($arg =~ /^dirs?/) { print "$dir\n"; }
+  } else {
+    print "$url $dir\n" if $name =~ /$arg/; 
+  }
 }

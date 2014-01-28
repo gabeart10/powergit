@@ -17,8 +17,7 @@ FAQ
 **Q: Did you know there is another `powergit` project?**
 
 A: Yes, and I imagine there are a lot of them. They suck---especially the
-one about powershell. Who the fuck still uses powershell anymore? (And
-don't say, "Who the fuck still uses Perl anymore?" Smart ass. ;P)
+one about powershell. Does anyone still use powershell anymore? ;P
 
 **Q: Aren't you afraid a command like 'save' will conflict?**
 
@@ -39,6 +38,14 @@ A: There was. Then I deleted it. In order for `git push -u origin
 master` to work you have to first have a repo there. It's just easier
 to create it on your hub of choice and `gclone` (after adding to
 `.giturls` or `git clone` it down.
+
+**Q: Why not just use `bash` functions and aliases?**
+
+A: Fair question. Look at `bashrc_add` for stuff you can add to
+supplement or replace calling the Perl scripts. However, having the
+Perl script versions is still important to me so that I can use these
+on systems that don't have bash (crazy right) but do have Perl (AIX,
+HP-UX, old Solaris, etc.)
 
 TODO
 ====
