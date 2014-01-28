@@ -47,7 +47,7 @@ Put something like the following in your `bashrc`. (Here's [mine][] with
 more stuff in it.)
 
 ```
-export GITURLS=~/config/giturls
+export GITURLS=$HOME/config/giturls
 
 gcd () {
   cd `gls $1 | perl -e '@m=split(/\s+/,<STDIN>);print$m[1]'`
