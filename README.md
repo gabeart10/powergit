@@ -61,11 +61,35 @@ sure we got them all right:
 ```
 gping
 ```
-OK, looks good ...
+OK, looks good:
+
+```
+---------------------- git@github.com:robmuh/config.git ----------------------
+dc8d8145850dad35e27a98760bd552d98f556b3f	HEAD
+----------------------- git@github.com:robmuh/bin.git ------------------------
+581d2e5371a6f061aea8965042ee24d6fdb58d95	HEAD
+--------------------- git@github.com:robmuh/vimfiles.git ---------------------
+bb67c4d05af8d273fc863964b5ecb9b0e445e690	HEAD
+-------------------- git@github.com:robmuh/mdaddlinks.git --------------------
+4bd36c036947e7afc9791d4fae6df29e091e9041	HEAD
+----------------------- git@github.com:robmuh/fmt.git ------------------------
+7658ccae1f3434b385144510d06aeaef2e28b496	HEAD
+--------------------- git@github.com:robmuh/filters.git ----------------------
+b131133108e9c8b2655f4de49302e67bca5827e3	HEAD
+----------------------- git@github.com:robmuh/note.git -----------------------
+2b3fef7106ab99caacb217ae764e3f7b0e18b262	HEAD
+----------------- git@github.com:robmuh/robmuh.github.io.git -----------------
+8096e41b057f5b5a81352392e86e2a7defad652b	HEAD
+------------------- git@github.com:trainemon/trainemon.git -------------------
+b81b2c76fac466c48ec4a72b0f800453fe7af2e4	HEAD
+----------- git@github.com:blockhead-battles/blockhead-battles.git -----------
+9e64af0d9c6c47ec7a387649a61cf7282be879c4	HEAD
+```
+So can go ahead and clone them down:
 
 ```
 gclone
-```
+
 The rest of the commands are pretty obvious:
 
 * `save` - short for `git status; git add .; git commit ..., git push`
