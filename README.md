@@ -2,8 +2,10 @@ PowerGit
 ========
 
 If you love git and work daily with multiple git repos (even hubs)
-then you will really want to use this set of PowerGit utility commands.
-Just pull down the repo and add this `powergit/bin` to your `$PATH`.
+then you will really want to use this set of PowerGit utility commands (or
+something like it, I'm sure it exists out there, was faster to write it
+than search.) Just pull down the repo and add this `powergit/bin` to your
+`$PATH`.
 
 Manage, create, clone, pull, push multiple git repos from the command
 line. If you aren't using this (or something like it) you are wasting
